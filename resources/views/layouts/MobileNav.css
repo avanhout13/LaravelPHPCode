@@ -1,0 +1,521 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+header {
+    text-align: center;
+    height: 2.5rem;
+}
+
+.nav {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(#ffffff, #ffffff);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+
+}
+
+.nav a {
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    background: rgb(255, 255, 255);
+    border: solid;
+}
+
+.nav a:not(:first-child) {
+    margin-left: 10px;
+}
+
+.nav a:hover {
+    filter: brightness(115%);
+    color: rgb(147, 240, 197);
+}
+
+.nav .icon {
+    display: none;
+}
+
+.info-left {
+    background: url("tree.jpg")no-repeat bottom;
+    background-size: cover;
+    background-position: 52.5%;
+    width: 45%;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.logos {
+    margin-top: 2rem;
+}
+
+.logos img {
+    height: 1.8rem;
+    margin: 6% auto 0 auto;
+}
+
+.logos #fb {
+    height: 1.74rem;
+}
+
+.centered {
+    margin: 2% auto 50% auto;
+}
+
+.typed {
+    text-shadow: 1px 1px black;
+}
+
+.centered h1 {
+    margin-top: 25%;
+}
+
+.centered h6 {
+    margin-top: -2%;
+}
+
+.info-left h3 {
+    color: #7948c7;
+    margin-top: -2%;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+
+#button {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    padding: 20px;
+    background: rgb(132, 212, 129);
+    background: linear-gradient(rgb(74, 161, 242), rgb(154, 247, 126));
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    filter: brightness(80%);
+}
+
+
+/*#container3{
+    width: 55%;
+    float: right;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+
+}*/
+
+.container3 {
+    width: 55%;
+    float: right;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.container3 h6 {
+    background: #afaeae;
+    padding: .6rem;
+    text-align: center;
+}
+
+.container3 h3 {
+    color: black;
+    text-align: center;
+}
+
+.grey {
+    background: lightgrey;
+}
+
+.container3 ul {
+    padding: 10px;
+}
+
+.container3 li {
+    list-style-type: none;
+    background: orange;
+    text-align: right;
+    padding: .5rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+
+#aboutThis {
+    width: 100%;
+    float: right;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#aboutThis h6 {
+    background: #afaeae;
+    padding: .6rem;
+    text-align: center;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#contact {
+    background: white;
+    background-size: 50% 150%;
+    background-position: right;
+    width: 100%;
+    float: right;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#contact h6 {
+    margin-top: 0;
+    background: #afaeae;
+    padding: .6rem;
+    text-align: center;
+}
+
+#contact h3,
+h4,
+h5 {
+    color: rgb(3, 3, 3);
+}
+
+#text {
+    width: 100%;
+    margin: 23px auto;
+}
+
+
+/*------------------------------Keyframes animations--------------------------------------*/
+/* pulse animation */
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+@-webkit-keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+@-moz-keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+@-o-keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+/*transparent menu on scroll*/
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+/*------------------------------Media queries--------------------------------------*/
+/* 1.Responsive menu*/
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {
+        display: none;
+    }
+
+    .nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .nav.responsive {
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    .nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav.responsive a {
+        float: none;
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav a:first-child {
+        float: left;
+    }
+
+    /*Full width divs on mobile */
+
+    .info-left {
+        width: 100%;
+        position: static;
+        margin-top: -3%;
+        background-position: 51%;
+    }
+
+    .info-right {
+        width: 100%;
+        height: 100%;
+    }
+
+    .info-right .scroll {
+        position: static;
+        margin: 0 auto 15px auto;
+        padding-bottom: 13px;
+    }
+
+    .container3,
+    #aboutThis {
+        position: static;
+        width: 100%;
+    }
+
+    #contact {
+        width: 100%;
+        background-size: 30% 150%;
+        background-position: right;
+    }
+
+    figcaption {
+
+        margin: -1.2% auto 0 auto;
+        padding: 12px;
+
+    }
+
+}
+
+/*Landscape view mobile */
+
+@media all and (min-height: 0px) and (max-height: 480px) {
+    .logos {
+        margin-top: 2.3%;
+    }
+
+    .centered h1 {
+        margin-top: 3%;
+    }
+}
+
+
+
+
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%
+}
+
+.block-main {
+    width: 100%;
+    height: 100%
+}
+
+.block-main>.block {
+    width: 50%;
+    height: 50%;
+    min-height: 200px;
+    float: left;
+    transition: all 0.5s ease-in
+}
+
+.block-main>.block .block-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out, opacity 0.2s linear 0.5s
+}
+
+.block-main>.block .block-box:hover {
+    transform: translateY(-15px)
+}
+
+.block-main>.block .block-icon {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 2;
+    speak: none;
+    cursor: pointer;
+    color: #fff;
+    -webkit-font-smoothing: antialiased
+}
+
+.block-main>.block .block-content {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    padding: 0 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: opacity 0.1s linear 0s
+}
+
+.block-main>.block .block-icon-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 35px;
+    opacity: 0
+}
+
+.block-main>.block.about {
+    background: #5680e9
+}
+
+.block-main>.block.about.block-expanded-item {
+    background: #455de4
+}
+
+.block-main>.block.works {
+    background: #84ceeb
+}
+
+.block-main>.block.works.block-expanded-item {
+    background: #3eadc9
+}
+
+.block-main>.block.blog {
+    background: #5ab9ea
+}
+
+.block-main>.block.blog.block-expanded-item {
+    background: #3d8fdb
+}
+
+.block-main>.block.contact {
+    background: #8860d0
+}
+
+.block-main>.block.contact.block-expanded-item {
+    background: #a539ec
+}
+
+
+
+.block-main>.block-expanded-item {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100
+}
+
+.block-main>.block-expanded-item .block-box {
+    opacity: 0;
+    transition: opacity 0s linear;
+    cursor: auto
+}
+
+.block-main>.block-expanded-item .block-content,
+.block-main>.block-expanded-item .block-icon-close {
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.3s linear 0.5s
+}
+
+.block-main.block-expanded {
+    overflow: hidden
+}
+
+.block-main.block-expanded>.block:not(.block-expanded-item) {
+    transform: scale(0.5);
+    opacity: 0
+}
+
+@media screen and (max-width: 46.5em) {
+
+    .block-content,
+    .block-box {
+        font-size: 75%
+    }
+
+    .block-expanded-item .block-box {
+        height: 130px
+    }
+}
